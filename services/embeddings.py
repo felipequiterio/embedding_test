@@ -7,32 +7,32 @@ from utils.time import log_time
 logger = get_custom_logger('EMBEDDINGS')
 
 
-@log_time('Loading tokenizer')
+@log_time('Tokenizer loaded.')
 def load_tokenizer():
     return AutoTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased')
 
 
-@log_time('Loading tokenizer large')
+@log_time('Tokenizer large loaded')
 def load_tokenizer_large():
     return AutoTokenizer.from_pretrained('neuralmind/bert-large-portuguese-cased')
 
 
-@log_time('Loading model')
+@log_time('Model loaded.')
 def load_model():
     return AutoModel.from_pretrained('neuralmind/bert-base-portuguese-cased')
 
 
-@log_time('Loading model')
+@log_time('Large model loaded.')
 def load_model_large():
     return AutoModel.from_pretrained('neuralmind/bert-large-portuguese-cased')
 
 
-@log_time('Tokenizing text')
+@log_time('Text tokenized.')
 def tokenize_text(tokenizer, text):
     return tokenizer.encode(text, return_tensors='pt')
 
 
-@log_time('Generating embeddings')
+@log_time('Embedding generated.')
 def generate_embeddings(model, input_ids):
     logger.info('Generating embeddings.')
     with torch.no_grad():
