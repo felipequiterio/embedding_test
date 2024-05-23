@@ -552,3 +552,84 @@ Connecting to database...
 Database connected!
 Retrieving passages with L2 distance
 Passages retrieved.
+Starting to process text: "O que é Inteligencia Artificial?"
+Tokenizing text - Time taken: 0:00:00.050629
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:01.252857
+Embeddings dimension: torch.Size([768])
+Connecting to database...
+Database connected!
+Retrieving passages with cosine distance
+Passages retrieved.
+Starting to process text: "O que é Inteligencia Artificial?"
+Tokenizing text - Time taken: 0:00:00.059319
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:03.920288
+Embeddings dimension: torch.Size([1024])
+Connecting to database...
+Database connected!
+Retrieving passages with cosine distance
+Passages retrieved.
+Starting to process text: "O que é Inteligencia Artificial?"
+Tokenizing text - Time taken: 0:00:00.015858
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:00.845372
+Embeddings dimension: torch.Size([768])
+Connecting to database...
+Database connected!
+Retrieving passages with L2 distance
+Passages retrieved.
+Starting to process text: "O que é Inteligencia Artificial?"
+Tokenizing text - Time taken: 0:00:00.006674
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:00.714063
+Embeddings dimension: torch.Size([1024])
+Connecting to database...
+Database connected!
+Retrieving passages with L2 distance
+Passages retrieved.
+Starting to process text: "O que é Inteligencia Artificial?"
+Tokenizing text - Time taken: 0:00:00.010980
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:00.227385
+Embeddings dimension: torch.Size([768])
+Connecting to database...
+Database connected!
+Retrieving passages with L2 distance
+Passages retrieved.
+Starting to process text: "O que é Inteligencia Artificial?"
+Tokenizing text - Time taken: 0:00:00.042623
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:01.138631
+Embeddings dimension: torch.Size([768])
+Connecting to database...
+Database connected!
+Retrieving passages with cosine distance
+Passages retrieved.
+Starting to process text: "Explique o que é um algoritimo?"
+Tokenizing text - Time taken: 0:00:00.047609
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:13.900033
+Embeddings dimension: torch.Size([768])
+Connecting to database...
+Database connected!
+Retrieving passages with cosine distance
+Passages retrieved.
+Starting to process text: "O que é POO?"
+Tokenizing text - Time taken: 0:00:00.094950
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:04.713126
+Embeddings dimension: torch.Size([768])
+Connecting to database...
+Database connected!
+Retrieving passages with cosine distance
+Passages retrieved.
+Starting to process text: "O que é POO?"
+Tokenizing text - Time taken: 0:00:00.054182
+Generating embeddings.
+Generating embeddings - Time taken: 0:00:01.439763
+Embeddings dimension: torch.Size([768])
+Connecting to database...
+Database connected!
+Retrieving passages with cosine distance
+Passages retrieved.
