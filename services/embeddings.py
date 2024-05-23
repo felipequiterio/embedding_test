@@ -43,10 +43,10 @@ def generate_embeddings(model, input_ids):
 
 
 tokenizer = load_tokenizer()
-tokenizer_large = load_tokenizer_large()
+#tokenizer_large = load_tokenizer_large()
 
 model = load_model()
-model_large = load_model_large()
+#model_large = load_model_large()
 
 
 def get_embeddings(text):
@@ -57,11 +57,11 @@ def get_embeddings(text):
     embedding = cls_embedding.tolist()
     return embedding
 
-
-def get_embeddings_large(text):
-    logger.info(f'Starting to process text: "{text}"')
-    input_ids = tokenize_text(tokenizer_large, text)
-    cls_embedding = generate_embeddings(model_large, input_ids)
-    logger.info(f'Embeddings dimension: {cls_embedding.size()}')
-    embedding = cls_embedding.tolist()
-    return embedding
+#
+# def get_embeddings_large(text):
+#     logger.info(f'Starting to process text: "{text}"')
+#     input_ids = tokenize_text(tokenizer_large, text)
+#     cls_embedding = generate_embeddings(model_large, input_ids)
+#     logger.info(f'Embeddings dimension: {cls_embedding.size()}')
+#     embedding = cls_embedding.tolist()
+#     return embedding
