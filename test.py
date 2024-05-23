@@ -4,7 +4,9 @@ from utils.log import get_custom_logger
 
 logger = get_custom_logger('TEST')
 
-embedding = get_embeddings('Explique o que é um algoritimo?')
+query = input('Query:')
+
+embedding = get_embeddings(query)
 
 response = retrieve_passages_cosine(embedding, 5)
 print('Retrieved Questions:')
