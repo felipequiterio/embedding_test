@@ -12,5 +12,5 @@ response = retrieve_passages_cosine(embedding, 5)
 print('Retrieved Questions:')
 print('-' * 30)
 for i, passage in enumerate(response.passages, start=1):
-    print(f"Passage {i}: \n{passage['question']}\n")
+    print(f"Passage {i}: \n{passage['question']}")
     print('-' * 30)
