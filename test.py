@@ -13,4 +13,5 @@ print('Retrieved Questions:')
 print('-' * 30)
 for i, passage in enumerate(response.passages, start=1):
     print(f"Passage {i}: \n{passage['question']}")
+    print(f"Similarity: {passage['similarity']:.2f}%")
     print('-' * 30)
