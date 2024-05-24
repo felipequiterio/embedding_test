@@ -24,7 +24,7 @@ def retrieve_passages_cosine(query_or_queries: Union[str, List[str]], k: Optiona
         sql_query = """
             SELECT question,
                    1 - (embedding <=> %s::vector) AS similarity
-            FROM text_vector_embeddings
+            FROM text_vector_embeddings_testecsv
             ORDER BY embedding <=> %s::vector
             LIMIT %s;
         """
