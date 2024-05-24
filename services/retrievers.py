@@ -22,15 +22,15 @@ def retrieve_passages_cosine(query_or_queries: Union[str, List[str]], k: Optiona
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
         logger.info('Retrieving passages with cosine distance')
         sql_query = """
-            SELECT question
+            SELECT question,
+                   1 - (embedding <=> %s::vector) AS similarity
             FROM text_vector_embeddings
             ORDER BY embedding <=> %s::vector
             LIMIT %s;
         """
-        cur.execute(sql_query, (query_or_queries, k))
+        cur.execute(sql_query, (query_or_queries, query_or_queries, k))
         results = cur.fetchall()
-        passages = [{'question': result['question']} for result in
-                    results]
+        passages = [{'question': result['question'], 'similarity': result['similarity']} for result in results]
         cur.close()
         logger.info('Passages retrieved.')
         return dspy.Prediction(passages=passages)
@@ -40,6 +40,7 @@ def retrieve_passages_cosine(query_or_queries: Union[str, List[str]], k: Optiona
     finally:
         if conn:
             conn.close()
+
 
 #
 # def retrieve_passages_cosine_large(query_or_queries: Union[str, List[str]], k: Optional[int] = None):
@@ -101,6 +102,7 @@ def retrieve_passages_l2(query_or_queries: Union[str, List[str]], k: Optional[in
     finally:
         if conn:
             conn.close()
+
 
 #
 # def retrieve_passages_l2_large(query_or_queries: Union[str, List[str]], k: Optional[int] = None):
